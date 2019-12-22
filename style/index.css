@@ -125,6 +125,7 @@
 }
 .wrapper_jobs_item{
     max-width: 577px;
+    margin-bottom: 50px; /* для добавления работ  */
 }
 .img_link_jobs{
     background: #fff url('../img/jobs/cap/job_fon.png') center no-repeat;
