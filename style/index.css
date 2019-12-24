@@ -125,10 +125,18 @@
 }
 .wrapper_jobs_item{
     max-width: 577px;
-    margin-bottom: 50px; /* для добавления работ  */
 }
 .img_link_jobs{
     background: #fff url('../img/jobs/cap/job_fon.png') center no-repeat;
+	display: flex;
+    position: relative;
+    width: 577px;
+    height: 393px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.link_job_car{
+    background: #fff url('../img/jobs/cap/race.png') center no-repeat;
 	display: flex;
     position: relative;
     width: 577px;
@@ -162,7 +170,8 @@
     color: #fff;
     text-transform: uppercase;
 }
-.img_link_jobs:hover .img_border_top, 
+.img_link_jobs:hover .img_border_top,
+.link_job_car:hover .img_border_top,
 .img_jobs_stub:hover .img_border_top{
     bottom: 0;
     cursor: pointer;
