@@ -28,7 +28,8 @@
           for ( let i = 0; i < 20; i++) {
                const line = document.createElement('div');
                line.classList.add('line');
-               line.style.top = (i * 100) + 'px';
+               line.style.top = (i * 100) +'px';
+               line.y = i * 100;
                gameArea.appendChild(line);
           }
 
@@ -45,8 +46,9 @@
        };
 
        function playGame(){
-           console.log('play Game!');
+          //  console.log('play Game!');
            if (setting.start){
+               moveRoad();
                 if(keys.ArrowLeft && setting.x > 0){
                      setting.x -= setting.speed;
                 }
@@ -77,3 +79,16 @@
             event.preventDefault();
             keys[event.key] = false;
        };
+
+       function moveRoad(){
+            let lines = document.querySelectorAll('.line');
+            lines.forEach(function(line){
+               line.y += setting.speed;
+               line.style.top = line.y + 'px';
+
+               if(line.y > document.documentElement.clientHeight) {
+                    line.y = -100;
+               }
+
+            })
+       }
