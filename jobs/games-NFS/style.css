@@ -42,6 +42,64 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+body{
+    font-family: 
+}
+.start {
+    position: absolute;
+    width: 300px;
+    background: url('./img/Lighting.png') center no-repeat;
+    top: 30%;
+    left: 39%;
+    z-index: 100;
+}
+.indent{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu_title{
+    font-size: 3em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #BED002;
+}
+.button_start {
+    width: 200px;
+    border: 0;
+    font-family: Georgia, serif;
+    font-weight: 500;
+    font-size: 2em;
+    padding: 15px 15px;
+    background: transparent;
+    color:#0D323A;
+    cursor: pointer;
+}
+.button_start:hover, .button_start_portfolio:hover{
+    background: #092E37;
+    box-shadow: inset 4px 4px #07242C;
+    transition: 0.9s;
+    -webkit-transition: 0.9s;
+    -moz-transition: 0.9s;
+    -ms-transition: 0.9s;
+    -o-transition: 0.9s;
+    color: #95B300;
+}
+.button_start_portfolio{
+    width: 250px;
+    border: 0;
+    font-family: Georgia, serif;
+    font-weight: 500;
+    font-size: 2em;
+    padding: 15px 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: transparent;
+    color:#0D323A;
+    cursor: pointer;
+}
+.none{display:none;}
 
 .hide{display:none;}
 .car{
@@ -52,11 +110,31 @@ table {
     left: 125px;
     bottom: 10px;
 }
-.top_link{
+.close_game{
+    display: flex;
     position: absolute;
     top: 20px;
+    background: #263238;
+    color: white;
+    left:20px;
+    margin: 15px 15px;
+    padding: 15px 15px;
+    opacity: 0;
 }
-/* .game{height: 100%;} */
+.close_game span {
+    color:red;
+}
+.open{
+    opacity: 1;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+.start_again{
+    display: block;
+}
 .gameArea{
     width: 300px;
     height: 100vh;

@@ -1,7 +1,8 @@
  const score = document.querySelector('.score'),
        start = document.querySelector('.start'),
        gameArea = document.querySelector('.gameArea'),
-       car = document.createElement('div');
+       car = document.createElement('div'),
+       closeGame = document.querySelector('.close_game');
         
     car.classList.add('car');
 
@@ -20,6 +21,7 @@
             start: false,
             score: 0,
             speed: 3
+
         };
 
        function startGame() {
@@ -31,6 +33,7 @@
                line.style.top = (i * 100) +'px';
                line.y = i * 100;
                gameArea.appendChild(line);
+
           }
 
 
@@ -82,6 +85,10 @@
 
        function moveRoad(){
             let lines = document.querySelectorAll('.line');
+          //   closeGame.classList.add('open');
+            setTimeout(() => {
+               closeGame.classList.add('open');
+            }, 2000);
             lines.forEach(function(line){
                line.y += setting.speed;
                line.style.top = line.y + 'px';
@@ -92,3 +99,11 @@
 
             })
        }
+
+       document.addEventListener('keydown', (event) => {
+            if (event.code === 'Escape'){
+               setting.start = false;
+               closeGame.style.opacity = '0';
+               start.classList.add('start_again');
+            }
+       })
