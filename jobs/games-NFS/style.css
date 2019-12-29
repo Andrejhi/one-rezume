@@ -49,10 +49,47 @@ body{
     position: absolute;
     width: 300px;
     background: url('./img/Lighting.png') center no-repeat;
-    top: 30%;
-    left: 39%;
+    top: 36.5vh;
+    left: 38.9vw;
     z-index: 100;
 }
+@media screen and (min-width: 1380px){
+    .start {
+        top: 36.5vh;
+        left: 39.1vw;
+    }
+}
+@media screen and (min-width: 1390px){
+    .start {
+        top: 36.5vh;
+        left: 40.5vw;
+    }
+}
+@media screen and (min-width: 1650px){
+    .start {
+        top: 36.5vh;
+        left: 41vw;
+    }
+}
+@media screen and (min-width: 1768px){
+    .start {
+        top: 36.5vh;
+        left: 41.5vw;
+    }
+}
+@media screen and (min-width: 1850px){
+    .start {
+        top: 36.5vh;
+        left: 41.9vw;
+    }
+}
+@media screen and (min-width: 2150px){
+    .start {
+        top: 36.5vh;
+        left: 43vw;
+    }
+}
+
 .indent{ 
     display: flex;
     flex-direction: column;
