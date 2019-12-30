@@ -50,7 +50,7 @@ body{
     width: 300px;
     background: url('./img/Lighting.png') center no-repeat;
     top: 36.5vh;
-    left: 38.9vw;
+    left: 39.2vw;
     z-index: 100;
 }
 @media screen and (min-width: 1380px){
@@ -62,7 +62,7 @@ body{
 @media screen and (min-width: 1390px){
     .start {
         top: 36.5vh;
-        left: 40.5vw;
+        left: 40.1vw;
     }
 }
 @media screen and (min-width: 1650px){
@@ -160,6 +160,27 @@ body{
 }
 .close_game span {
     color:red;
+}
+.ruls_game{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 400px;
+    font-size: 3em;
+    top: 20px;
+    background: #263238;
+    color: white;
+    right:20px;
+    margin: 15px 15px;
+    padding: 15px 15px;
+    opacity: 0;
+    z-index: 2;
+}
+.arrow{
+    background: transparent url('/img/arrow/arrow2.png') center no-repeat;
+    display: flex;
+    justify-content: center;
+    height: 245px;
 }
 .open{
     opacity: 1;

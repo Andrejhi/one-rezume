@@ -2,7 +2,8 @@
        start = document.querySelector('.start'),
        gameArea = document.querySelector('.gameArea'),
        car = document.createElement('div'),
-       closeGame = document.querySelector('.close_game');
+       closeGame = document.querySelector('.close_game'),
+       rulsGame = document.querySelector('.ruls_game');
         
     car.classList.add('car');
 
@@ -87,6 +88,9 @@
             let lines = document.querySelectorAll('.line');
           //   closeGame.classList.add('open');
             setTimeout(() => {
+               rulsGame.classList.add('open');
+            }, 1000);
+            setTimeout(() => {
                closeGame.classList.add('open');
             }, 2000);
             lines.forEach(function(line){
@@ -99,11 +103,15 @@
 
             })
        }
+     document.addEventListener('keydown', again);
 
-       document.addEventListener('keydown', (event) => {
-            if (event.code === 'Escape'){
-               setting.start = false;
-               closeGame.style.opacity = '0';
-               start.classList.add('start_again');
-            }
-       })
+     function again(event){
+          // document.addEventListener('keydown', (event) => {
+               if (event.code === 'Escape'){
+                    setting.start = false;
+                    closeGame.style.opacity = '0';
+                    rulsGame.style.opacity = '0';
+                    start.classList.add('start_again');
+               }
+          // });
+     }
