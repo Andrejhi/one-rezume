@@ -177,7 +177,7 @@ body{
     z-index: 2;
 }
 .arrow{
-    background: transparent url('/img/arrow/arrow2.png') center no-repeat;
+    background: transparent url('./img/arrow/arrow2.png') center no-repeat;
     display: flex;
     justify-content: center;
     height: 245px;
