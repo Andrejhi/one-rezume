@@ -212,6 +212,85 @@
     font-weight: 400;
     letter-spacing: 0.19px;
 }
+
+.box_hover{
+    height: 393px;
+    overflow: hidden;
+    position: relative;
+}
+.box_hover img {
+    width: calc( 100% + 30px );
+    position: relative;
+    min-height: 393px;
+    transition: all .5s linear;
+    transform: translateX(-30px);
+    opacity:.6;
+}
+.box_hover:hover > img {
+    transition: all .5s linear;
+    transform: translateX(0px);
+    opacity:.9;
+    cursor: pointer;
+}
+.box_hover h2,
+.box_hover p{
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    left:30px;
+    transition: all .5s linear;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.box_hover h2{
+    bottom: 80px;
+    text-transform: uppercase;
+}
+.box_hover p{
+    bottom: 5px;
+}
+.box_hover:hover > h2,
+.box_hover:hover > p{
+    transition: all .5s linear;
+    transform: translateX(0%);
+    opacity: 1;
+}
+.hover_ef{
+    width: 577px;
+    height: 150px;
+    background-color: rgb(94, 82, 82, .7);
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    transition: all .4s linear;
+    transform: translateY(100%);
+}
+.box_hover:hover > .hover_ef{
+    transition: all .4s linear;
+    transform: translateY(10%);
+}
+.hover_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    background: url('/img/mouse_click.png') center no-repeat;
+    background-color: rgb(255, 255, 255, .5);
+    border: 2px dashed #fff;
+    border-radius: 22px;
+    position: absolute;
+    z-index: 3;
+    top: 48%;
+    left: 48%;
+    transform: scale(0);
+}
+.box_hover:hover > .hover_link {
+    transition: all .5s linear;
+    transition-delay: .5s;
+    transform: scale(1);
+}
 .title_brif{
     margin-top: 100px;
     text-align: center;
