@@ -1,0 +1,104 @@
+
+body{
+    font-family: "PT Serif","Times New Roman",Times,Baskerville,Georgia,serif;
+    width: 100%;
+    min-height: 100vh;
+    color: #222;
+    line-height: 0.125vmax;
+    font-size: 1.12vmax;
+    background-color: khaki;
+}
+.nav_box {
+    position: fixed;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 40px 25px;
+}
+.img_header{
+    margin-right: 150px;
+}
+.nav_header{
+    display: flex;
+    justify-content: center;
+}
+.nav_item{
+    padding-right: 100px;
+}
+.nav_item a{
+    position: relative;
+    font-size: 16px;  /*1.12vmax;*/
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-bottom: 10px;
+    /* overflow: hidden; */
+}
+.nav_item a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: orange;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+}
+.nav_item a:hover:before{
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+}
+.nav_box nav li div {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: all 1s ease-out;
+    transform: translateY(100%);
+}
+.nav_box nav li a:hover ~ div {
+    opacity: 0.7;
+    transition: all 1s ease-out;
+    transform: translateY(0%);
+}
+.nav_box nav li:nth-of-type(1) div {
+    background-image: url('../img/slide/1.png');
+}
+.nav_box nav li:nth-of-type(2) div {
+    background-image: url('../img/slide/2.png');
+}
+.nav_box nav li:nth-of-type(3) div {
+    background-image: url('../img/slide/3.png');
+}
+.search_header span {
+    /* background: transparent; */
+    /* background: url('./jobs/blog-Darja/img/search.png') center no-repeat; */
+    cursor: pointer;
+    font-size: 1.2em;
+}
+.search_form{
+    position: fixed;
+    top:0;
+    left:0;
+    background: url('');
+    z-index: 10;
+}
