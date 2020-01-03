@@ -1,4 +1,4 @@
-
+.open{opacity: 1;}
 body{
     font-family: "PT Serif","Times New Roman",Times,Baskerville,Georgia,serif;
     width: 100%;
@@ -6,7 +6,6 @@ body{
     color: #222;
     line-height: 0.125vmax;
     font-size: 1.12vmax;
-    background-color: khaki;
 }
 .nav_box {
     position: fixed;
@@ -14,12 +13,14 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80vw;
-    margin: 0 auto;
+    min-width: 80vw;
+    margin-left: 150px;
     padding: 40px 25px;
 }
 .img_header{
     margin-right: 150px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
 }
 .nav_header{
     display: flex;
@@ -89,16 +90,77 @@ body{
 .nav_box nav li:nth-of-type(3) div {
     background-image: url('../img/slide/3.png');
 }
-.search_header span {
-    /* background: transparent; */
-    /* background: url('./jobs/blog-Darja/img/search.png') center no-repeat; */
+.search_header {
     cursor: pointer;
-    font-size: 1.2em;
+}
+.close_search{
+    width: .5em;
+    background-image: url('../img/close.png');
+    background-size: cover;
+    background-position: center;
 }
 .search_form{
     position: fixed;
-    top:0;
+    width: 100%;
+    height: 80vh;
+    top:96px;
     left:0;
-    background: url('');
-    z-index: 10;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(-150%);
+    background-color: #fff;
+}
+.none_block{
+    display: flex;
+}
+.open_search{
+    opacity: 1;
+    transform: translateY(0);
+    transition: .5s;
+}
+.search_form p {
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 3.33vmax;
+    margin: 0 auto;
+}
+.search_field{
+    /* display: flex; */
+    padding: .5em .3em;
+    min-width: 83.33vw;
+    border: none;
+    border-bottom: 1px solid orange;
+    text-align: center;
+    font-size: 5em;
+}
+.input_field{
+    border: none;
+    background: none;
+}
+.input_field::before{
+    position: absolute;
+    content: '\2b9e';
+    width: 2em;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+main {
+    padding-top: 96px;
+    z-index: 1;
+}
+.container{
+    max-width: 1325px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.posts{
+    display: flex;
+    max-width: 350px;
+    min-height: 300px;
 }
