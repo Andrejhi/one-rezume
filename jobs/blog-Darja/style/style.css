@@ -7,7 +7,7 @@ body{
     color: #222;
     line-height: 0.125vmax;
     font-size: 1.12vmax;
-    background-image: url('../img/bg_1.jpg');
+    /* background-image: url('../img/bg_1.jpg'); */
 }
 .nav_box {
     position: fixed;
@@ -168,10 +168,13 @@ main {
     justify-content: space-between;
     flex-wrap: wrap;
     /* overflow-x: hidden; */
-    height: 84.3vh;
+    /* height: 84.3vh; */
 }
 .posts{
     display: flex;
-    max-width: 350px;
-    min-height: 350px;
+    width: 350px;
+    height: 450px;
+}
+.down{
+    padding-bottom: 25px;
 }
