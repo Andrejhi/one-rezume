@@ -7,7 +7,7 @@ body{
     color: #222;
     line-height: 0.125vmax;
     font-size: 1.12vmax;
-    background-image: transparent url('../img/bg_1.jpg');
+    background-image: url('../img/bg_1.jpg');
 }
 .nav_box {
     position: fixed;
