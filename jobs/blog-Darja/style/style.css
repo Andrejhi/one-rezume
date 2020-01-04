@@ -16,8 +16,8 @@ body{
     justify-content: space-between;
     align-items: center;
     min-width: 80vw;
-    margin-left: 150px;
-    margin-right: 150px;
+    max-width: 80vw;
+    margin: 0 150px;
     padding: 40px 25px;
     background-color: rgb(255, 255, 255);
 }
@@ -35,7 +35,7 @@ body{
 }
 .nav_item a{
     position: relative;
-    font-size: 16px;  /*1.12vmax;*/
+    font-size: 1em;  /*1.12vmax;*/
     font-weight: 300;
     text-transform: uppercase;
     text-decoration: none;
