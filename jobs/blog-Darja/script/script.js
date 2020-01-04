@@ -16,7 +16,7 @@ closeSearch.addEventListener('click', () => {
     closeSearch.style.display = 'none';
 });
 searchIcon.addEventListener('click', () => {
-    searchForm.style.top = '96px';
+    searchForm.style.top = '81px';
     searchIcon.style.display = 'none';
     closeSearch.style.display = 'flex';
 });
