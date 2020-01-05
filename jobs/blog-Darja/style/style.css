@@ -20,7 +20,7 @@ body{
     align-items: center;
     min-width: 80vw;
     max-width: 80vw;
-    margin: 0 150px;
+    margin-left:7.18vw;
     padding: 40px 25px;
     background-color: rgb(255, 255, 255);
 }
@@ -28,6 +28,7 @@ body{
     margin-right: 150px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2em;
+    min-width: 6.25vw;
 }
 .nav_header{
     display: flex;
@@ -224,21 +225,21 @@ main {
     .burger_menu div:nth-of-type(3){
        
     }
-    .burger_menu div:nth-of-type(1) .item::before{
+    .burger_menu div:nth-of-type(1)::before{
         display: flex;
         position: absolute;
         top: -20;
-        left: 0;
+        left: 100;
         width: 40px;
         height: 2px;
         transform: rotate(90deg);
         transition: 0.5s;
     }
-    .burger_menu div::before:nth-of-type(2) .item::before{
+    .burger_menu div::before:nth-of-type(2)::before{
         display: flex;
         position: absolute;
         top: 50;
-        left: 0;
+        left: 100;
         width: 40px;
         height: 2px;
         transform: rotate(-120deg);
