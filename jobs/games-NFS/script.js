@@ -5,30 +5,36 @@
        closeGame = document.querySelector('.close_game'),
        rulsGame = document.querySelector('.ruls_game');
         
-    car.classList.add('car');
+     car.classList.add('car');
 
         start.addEventListener('click', startGame);
         document.addEventListener('keydown', startRun);
         document.addEventListener('keyup', stopRun);
 
-        const keys = {
+     const keys = {
             ArrowUp: false,
             ArrowDown: false,
             ArrowRight: false,
             ArrowLeft: false
-        };
+     };
 
-        const setting = {
+     const setting = {
             start: false,
             score: 0,
-            speed: 3
+            speed: 3,
+            traffic: 3
+     };
 
-        };
+     function getQuantityElements(heightElement){
+          return document.documentElement.clientHeight / heightElement + 1;
+     }
+     console.log(getQuantityElements(200));
 
-       function startGame() {
+     function startGame() {
             start.classList.add('hide');
 
-          for ( let i = 0; i < 20; i++) {
+
+          for ( let i = 0; i < getQuantityElements(100); i++) {
                const line = document.createElement('div');
                line.classList.add('line');
                line.style.top = (i * 100) +'px';
@@ -37,7 +43,14 @@
 
           }
 
-
+          for (let i = 0; i < getQuantityElements(100 * setting.traffic); i++){
+               const enemy = document.createElement('div');
+               enemy.classList.add('enemy');
+               enemy.y = -100 * setting.traffic * (i + 1);
+               enemy.style.left = (Math.random() * gameArea.offsetWidth) + 'px';
+               enemy.style.top = enemy.y + 'px';
+               gameArea.appendChild(enemy);  
+          }
             // значение настроек будет меняться в начале игры поэтому ставим так
             setting.start = true;
             // вставляем в блок div элемент
@@ -47,12 +60,13 @@
             requestAnimationFrame(playGame);
             // обработчики события
             // console.dir(start);
-       };
+     };
 
-       function playGame(){
+     function playGame(){
           //  console.log('play Game!');
            if (setting.start){
                moveRoad();
+               moveEnemy();
                 if(keys.ArrowLeft && setting.x > 0){
                      setting.x -= setting.speed;
                 }
@@ -72,19 +86,20 @@
                 requestAnimationFrame(playGame);
            }
            
-       };
+     };
 
-       function startRun(event){
+     function startRun(event){
             event.preventDefault();
             keys[event.key] = true;
-       };
 
-       function stopRun(event){
+     };
+
+     function stopRun(event){
             event.preventDefault();
             keys[event.key] = false;
-       };
+     };
 
-       function moveRoad(){
+     function moveRoad(){
             let lines = document.querySelectorAll('.line');
           //   closeGame.classList.add('open');
             setTimeout(() => {
@@ -101,17 +116,32 @@
                     line.y = -100;
                }
 
-            })
-       }
+            });
+     }
+
+     function moveEnemy(){
+          let enemy = document.querySelectorAll('.enemy');
+          enemy.forEach(function(item){
+               item.y += setting.speed / 3;
+               item.style.top = item.y + 'px';
+
+               if(item.y >= document.documentElement.clientHeight){
+                    item.y = -100 * setting.traffic;
+               }
+          });
+     }
+
+
+
+
+
      document.addEventListener('keydown', again);
 
      function again(event){
-          // document.addEventListener('keydown', (event) => {
                if (event.code === 'Escape'){
                     setting.start = false;
                     closeGame.style.opacity = '0';
                     rulsGame.style.opacity = '0';
                     start.classList.add('start_again');
                }
-          // });
      }
