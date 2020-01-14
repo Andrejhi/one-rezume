@@ -47,9 +47,10 @@
                const enemy = document.createElement('div');
                enemy.classList.add('enemy');
                enemy.y = -100 * setting.traffic * (i + 1);
-               enemy.style.left = (Math.random() * gameArea.offsetWidth) + 'px';
+               enemy.style.left = Math.floor(Math.random() * (gameArea.offsetWidth - 50)) + 'px';
+               enemy.style.background = 'transparent url(./img/car/car2.png) center no-repeat';
                enemy.style.top = enemy.y + 'px';
-               gameArea.appendChild(enemy);  
+               gameArea.appendChild(enemy);
           }
             // значение настроек будет меняться в начале игры поэтому ставим так
             setting.start = true;
@@ -127,6 +128,7 @@
 
                if(item.y >= document.documentElement.clientHeight){
                     item.y = -100 * setting.traffic;
+                    item.style.left = Math.floor(Math.random() * (gameArea.offsetWidth - 50)) + 'px';
                }
           });
      }
