@@ -35,7 +35,6 @@ searchIcon.addEventListener('click', () => {
     //         navBurgerDown.classList.add('box_menu_up');
     //     });
     // }
-/
 
 // ленивая загрузка
 
