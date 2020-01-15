@@ -39,37 +39,37 @@ searchIcon.addEventListener('click', () => {
 
 // ленивая загрузка
 
-// const imgPost = document.querySelectorAll('.img_post');
-// const postContent = document.querySelectorAll('.posts');
+const imgPost = document.querySelectorAll('.img_post');
+const postContent = document.querySelectorAll('.posts');
 
-// const options = {
-//     root : null,
-//     rootMargin: '0px',
-//     threshold : 0.1
-// }
+const options = {
+    root : null,
+    rootMargin: '0px',
+    threshold : 0.1
+}
 
-// function handleImg( myImg, observer){
-//     myImg.forEach(myImgSingle => {
-//         console.log(myImgSingle.intersectionRatio);
+function handleImg( myImg, observer){
+    myImg.forEach(myImgSingle => {
+        console.log(myImgSingle.intersectionRatio);
 
-//         if(myImgSingle.intersectionRatio > 0){
-//             loadImage(myImgSingle.target);
-//         }
-//     })
-// }
+        if(myImgSingle.intersectionRatio > 0){
+            loadImage(myImgSingle.target);
+        }
+    })
+}
 
-// function loadImage(imgPost){
-//     imgPost.src = imgPost.getAttribute('data');
-// }
-// function loadDIV(postContent){
-//     postContent.src = postContent.getAttribute('data-real');
-// }
+function loadImage(imgPost){
+    imgPost.src = imgPost.getAttribute('data');
+}
+function loadDIV(postContent){
+    postContent.src = postContent.getAttribute('data-real');
+}
 
-// const observer = new IntersectionObserver(handleImg, options);
+const observer = new IntersectionObserver(handleImg, options);
 
-// imgPost.forEach (imgPost => {
-//     observer.observe(imgPost);
-// })
+imgPost.forEach (imgPost => {
+    observer.observe(imgPost);
+})
 
 // ленивая загрузка
 
