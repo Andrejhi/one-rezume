@@ -61,9 +61,9 @@ function handleImg( myImg, observer){
 function loadImage(imgPost){
     imgPost.src = imgPost.getAttribute('data');
 }
-function loadDIV(postContent){
-    postContent.src = postContent.getAttribute('data-real');
-}
+// function loadDIV(postContent){
+//     postContent.src = postContent.getAttribute('data-real');
+// }
 
 const observer = new IntersectionObserver(handleImg, options);
 
