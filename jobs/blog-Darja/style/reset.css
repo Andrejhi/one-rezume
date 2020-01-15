@@ -1,6 +1,8 @@
 *{
     padding: 0;
-    margin: 0;
+	margin: 0;
+	list-style: none;
+    text-decoration: none;
     /* box-sizing: border-box; */
 }
     html, body, div, span, applet, object, iframe,
@@ -27,12 +29,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-html{
-
-}
 
 body {
     line-height: 1;
+}
+html, body {
+	position: relative;
+	z-index: 5;
 }
 ol, ul, ul, li {
     list-style: none;
