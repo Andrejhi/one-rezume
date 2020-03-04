@@ -6,8 +6,6 @@ const searchForm = document.querySelector('.search_form'),
     searchFormSmart = document.querySelector('.search_form_smart'),
     burgerMenu = document.querySelector('.burger_menu'),
     navBurgerDown = document.querySelector('.nav_burger_down');
-    // boxMenuCl = document.querySelector('.box_menu_cl'),
-    // boxMenuUp = document.querySelector('.box_menu_up');
 
 searchIcon.addEventListener('click', () => {
     searchForm.classList.add('open_search');
@@ -27,19 +25,7 @@ searchIcon.addEventListener('click', () => {
     closeSearch.style.display = 'flex';
 });
 
-    // $('.burger_menu').on('click', function(){
-    //     $('.nav_burger_down').toggleClass('box_menu_up');
-    // })
-    // if(navBurgerDown.classList.add('box_menu_cl')){
-    //     burgerMenu.addEventListener('click', () => {
-    //         navBurgerDown.classList.add('box_menu_up');
-    //     });
-    // }
-
-// ленивая загрузка
-
 const imgPost = document.querySelectorAll('.img_post');
-const postContent = document.querySelectorAll('.posts');
 
 const options = {
     root : null,
@@ -60,17 +46,12 @@ function handleImg( myImg, observer){
 function loadImage(imgPost){
     imgPost.src = imgPost.getAttribute('data');
 }
-// function loadDIV(postContent){
-//     postContent.src = postContent.getAttribute('data-real');
-// }
 
 const observer = new IntersectionObserver(handleImg, options);
 
 imgPost.forEach (imgPost => {
     observer.observe(imgPost);
 })
-
-// ленивая загрузка
 
 // $('.burger_menu').on('click', function(e) {
 //     e.preventDefault();
