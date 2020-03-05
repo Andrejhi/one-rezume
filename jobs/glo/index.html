@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<!--	<link rel="manifest" href="favicon/manifest.json">-->
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="style/bootstrap.min.css">
+	<link rel="stylesheet" href="./scss/style.css">
+	<title>AliJSpress</title>
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<div class="container">
+				<div class="row justify-content-between align-items-center">
+					<a class="logo" href="index.html"></a>
+
+					<form class="search">
+						<div class="search-wrapper">
+							<input id="searchGoods" class="search-wrapper_input" type="text" aria-label="Поиск товаров" role="search">
+						</div>
+						<div class="search-wrap-btn">
+							<button type="submit" class="search-btn" id="search-btn" aria-label="Поиск товаров"></button>
+						</div>
+					</form>
+					<a href="#" class="nav-elements" id="cart">
+						<span class="counter">0</span>
+					</a>
+					<a href="#" class="nav-elements" id="wishlist">
+						<span class="counter">0</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="row justify-content-center justify-content-sm-between">
+				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
+					<div class="category">
+						<div class="category-title">
+							<h5>Категории</h5>
+						</div>
+						<ul class="category-list">
+							<li>
+								<a href="#" class="category-item category-item__mobile" data-category="mobile">Телефоны и аксессуары</a>
+							</li>
+							<li>
+								<a href="#" class="category-item category-item__pc" data-category="pc">Компьютеры и оргтехника</a>
+							</li>
+							<li>
+								<a href="#" class="category-item category-item__electron" data-category="electron">Электроника</a>
+							</li>
+							<li>
+								<a href="#" class="category-item category-item__home" data-category="home">Бытовая Техника</a>
+							</li>
+							<li>
+								<a href="#" class="category-item category-item__sport" data-category="sport">Спорт и развлечения</a>
+							</li>
+							<li>
+								<a href="https://andrejhi.github.io/new-ver-portfolio/" class="" data-category="">В портфолио</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-9 col-xl-10">
+					<div class="container">
+						<div class="row no-gutters goods-wrapper justify-content-center">
+							<!-- КАРТОЧКИ ТОВАРОВ -->
+							<!-- <div class="card-wrapper col-12 col-md-6 col-lg-4 col-xl-3 pb-3">
+								<div class="card">
+									<div class="card-img-wrapper">
+										<img class="card-img-top" src="img/temp.png" alt="">
+										<button class="card-add-wishlist"></button>
+									</div>
+									<div class="card-body justify-content-between">
+										<a href="#" class="card-title">Имя товара</a>
+										<div class="card-price">100000 ₽</div>
+										<div>
+											<button class="card-add-cart">Добавить в корзину</button>
+										</div>
+									</div>
+								</div>
+							</div> -->
+							
+
+
+							<!-- END КАРТОЧКИ ТОВАРОВ -->
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+	</main>
+
+	<div class="cart">
+		<div class="cart-body">
+			<div class="cart-head">
+				<div class="cart-title">Корзина</div>
+				<div class="cart-total">Общая сумма: <span>0</span> руб</div>
+			</div>
+
+			<div class="cart-wrapper">
+				<!-- <div id="cart-empty">
+					Ваша корзина пока пуста
+				</div> -->
+
+				<div class="goods">
+					<div class="goods-img-wrapper">
+						<img class="goods-img" src="img/temp.png" alt="">
+
+					</div>
+					<div class="goods-description">
+						<h2 class="goods-title">Название товара</h2>
+						<p class="goods-price">100000 ₽</p>
+
+					</div>
+					<div class="goods-price-count">
+						<div class="goods-trigger">
+							<button class="goods-add-wishlist"></button>
+							<button class="goods-delete"></button>
+						</div>
+						<div class="goods-count">1</div>
+					</div>
+				</div>
+
+
+			</div>
+
+			<button class="btn btn-primary cart-confirm">Оформить заказ</button>
+			<div class="cart-close">
+
+			</div>
+		</div>
+	</div>
+
+
+	
+<script src="script/script.js"></script>
+</body>
+
+</html>
+
+<!-- spinner
+
+<div id="spinner"><div class="spinner-loading"><div><div><div></div>
+</div><div><div></div></div><div><div></div></div><div><div></div></div></div></div></div>
+
+-->
