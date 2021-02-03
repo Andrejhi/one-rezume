@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container-blog{
+    max-width: 80vw;
+    margin: 0 auto;
+
+}
+.header-blog{
+    display:flex;
+    width: 80vw;
+    border: 1px solid black;
+}
