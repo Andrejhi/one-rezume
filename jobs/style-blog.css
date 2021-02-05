@@ -133,6 +133,7 @@ footer {
     margin: 0 auto;
 
 }
+.wrap-content-senter{}
 .header-blog{
     display:flex;
     width: 80vw;
@@ -144,3 +145,7 @@ footer {
     width: 60vw;
     border: 1px solid black;
 }
+.novosti-technolog{
+
+}
+.novosti-document{}
