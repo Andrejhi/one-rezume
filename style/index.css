@@ -317,6 +317,16 @@
     cursor: pointer;
 }
 
+.link_job_youtbe{
+    background: #fff url('../img/jobs/cap/youtbe_screen.png') center no-repeat;
+	display: flex;
+    position: relative;
+    width: 577px;
+    height: 393px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
 .button__line{
     position: absolute;
 }
@@ -335,7 +345,8 @@
 .img_link_jobs:hover .img_border_top,
 .link_job_car:hover .img_border_top,
 .link_job_mag:hover .img_border_top,
-.img_jobs_stub:hover .img_border_top{
+.img_jobs_stub:hover .img_border_top,
+.link_job_youtbe:hover .img_border_top{
     bottom: 0;
     cursor: pointer;
     transition: 0.2s;

@@ -1,14 +1,151 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+@import url(../../../../node_modules/normalize.css/normalize.css);
+@font-face {
+  font-family: 'PT Serif';
+  src: local("PT Serif Bold"), local("PTSerif-Bold"), url("../fonts/PT Serif/PTSerif-Bold.woff") format("woff"), url("../fonts/PT Serif/PTSerif-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PT Serif';
+  src: local("PT Serif"), local("PTSerif-Regular"), url("../fonts/PT Serif/PTSerif-Regular.woff") format("woff"), url("../fonts/PT Serif/PTSerif-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Arial';
+  src: local("Arial"), local("ArialMT"), url("../fonts/Arial/ArialMT.woff") format("woff"), url("../fonts/Arial/ArialMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 16px;
+  height: 100%; }
+
+body {
+  height: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+p {
+  margin: 0; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea {
+  vertical-align: middle; }
+
+textarea {
+  resize: none; }
+
+section {
+  position: relative; }
+
+input,
+select,
+button {
+  outline: none; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%; }
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+  padding: 0 15px; }
+
+footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
+
+.header {
+  background-color: #EEF2F4; }
+  .header__nav.header__nav--right {
+    margin-left: auto; }
+  .header__top {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px 0; }
+  .header__main {
+    padding: 25px 0; }
+
+.header-nav__list {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.header-nav__item {
+  margin-right: 30px; }
+  .header-nav__item:last-child {
+    margin-right: 0; }
+
+.header-nav__link {
+  color: #4b4b4b;
+  font-size: 12px;
+  line-height: 1.67; }
+
+                           /* RESET */
+
+
 .container-blog{
     max-width: 80vw;
     margin: 0 auto;
 
 }
+.wrap-content-senter{}
 .header-blog{
     display:flex;
     width: 80vw;
     border: 1px solid black;
 }
+.news{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    border: 1px solid black;
+}
+.novosti-technolog{
+
+}
+.novosti-document{}
